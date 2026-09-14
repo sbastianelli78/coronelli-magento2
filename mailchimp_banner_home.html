@@ -1,0 +1,29 @@
+<div class="row pl-banner-newsletter">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="/media/ipad.png" class="img-responsive pl-img-ipad" />
+            </div>
+            <div class="col-sm-1">
+                <h2>Rimani in contatto</h2>
+            </div>
+            <div class="col-sm-8">
+                <form action="/hoop_contacts/index/index" method="post">
+                    <input type="hidden" name="from" value="mailchimpform" />
+                    <p>Iscriviti alla nostra newsletter per essere sempre aggiornato sulle novità di prodotto, le offerte  e le promozioni in corso.</p>
+                    Inserisci la tua email &nbsp;<input type="email" name="email" data-validate="{required:true, 'validate-email':true}" /> &nbsp;&nbsp;&nbsp;<input type="submit" value="Iscriviti" />
+                    <br />
+                    <div class="col-sm-12 text-left field required" style="margin-bottom: 15px;">
+                        <input id="privacy" class="check-right" name="privacy" data-validate="{required:true}" required="true" type="checkbox"> Confermo di aver letto l'informativa al trattamento. Per l'informativa completa clicca <a href="/it/privacy" target="_blank">qui</a><span class="pl-asterisk">*</span>
+                    </div>
+
+                    <div class="col-sm-12 field text-left newsletter" style="margin-bottom: 15px;">
+                        <input style="display: inline-block;" type="checkbox" name="is_subscribed" title="Autorizzo al trattamento del mio nome ed indirizzo mail per l'iscrizione alla newsletter" value="1" id="is_subscribed" class="checkbox">
+                        Autorizzo al trattamento del mio nome ed indirizzo mail per l'iscrizione alla newsletter
+                    </div>
+                    <!-- <input type="submit" value="Iscriviti" /> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

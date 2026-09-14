@@ -1,0 +1,67 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */?>
+<?php $_product = $block->getProduct() ?>
+
+
+<?php // giorg 20171012 - proprietà alimentari
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$mediaPath = $objectManager->get('Magento\Store\Model\StoreManagerInterface')
+    ->getStore()
+    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+if (is_object($_product)  && $_product->load($_product->getId())): ?>
+    <div class="pl-proprieta-alimentari">
+        <?php if ($_product->getSenzaOlioDiPalma()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>palma.jpg" /></div>
+        <?php endif; ?>
+        <?php if ($_product->getGlutenFree()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>gluten.jpg" /></div>
+        <?php endif; ?>
+        <?php if ($_product->getCertificatoVegan()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>vegan_ok.jpg" /></div>
+        <?php endif; ?>
+        <?php if ($_product->getCertificazioneHalal()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>halal.jpg" /></div>
+        <?php endif; ?>
+        <?php if ($_product->getIdoneoHalal()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>idoneo_halal.jpg" /></div>
+        <?php endif; ?>
+        <?php if ($_product->getIdoneoVegan()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>idoneo_vegan.jpg" /></div>
+        <?php endif; ?>
+        <?php if ($_product->getBio()): ?>
+            <div class="pl-prop-alimentare"><img src="<?php echo $mediaPath; ?>bio.jpg" /></div>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+
+
+
+<?php if ($_product->getConfezione()): ?>
+    <div class="pl-confezione"><?php echo __('Tailoring') . ': ' . strtolower($_product->getConfezione()) ?></div>
+<?php endif; ?>
+
+<?php // giorg 20171012 - sku
+if (is_object($_product) && $_product->load($_product->getId())): ?>
+    <h5 class="pl-sku"><?php echo $_product->getSku() ?></h5>
+<?php endif; ?>
+
+
+<?php if ($block->displayProductStockStatus()): ?>
+    <?php if ($_product->isAvailable()): ?>
+        <div class="stock available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+            <?php /* @escapeNotVerified */ // echo __('Availability') ?><span><?php /* @escapeNotVerified */ echo __('In stock') ?></span>
+        </div>
+    <?php else: ?>
+        <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+            <?php /* @escapeNotVerified */ // echo __('Availability') ?><span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>

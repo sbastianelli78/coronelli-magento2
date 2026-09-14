@@ -1,0 +1,1436 @@
+// @import '_variables.less';
+@main_pink: #e09fab;
+@main_brown: #542d00;
+@light_grey: #f4f4f4;
+@dark_grey: #696969;
+@white: #ffffff;
+@re: red;
+@black: #000000;
+
+.pl-fontlato, h5 {
+  font-family: Lato, sans-serif !important;
+}
+
+a:hover {
+  color: @main_pink !important;
+}
+
+body.eren-page-preloader::after {
+  border-left-color: @main_brown !important;
+}
+
+.banner-top-home .banner-top a:before {
+  background: rgba(224, 159, 171, 0.1) !important;
+}
+
+.header-container {
+  .header {
+    background-color: #ffffff !important;
+    .logo {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+    .navigation .level0 > .level-top {
+      color: @main_brown;
+    }
+    .col-md-9.col-sm-9.col-xs-5.col-menu {
+      margin-top: 28px;
+    }
+    .minicart-wrapper {
+      .minicart-items-wrapper {
+        .product.actions .primary {
+          display: none;
+        }
+      }
+      .icon-cart-header .icon {
+        color: @main_brown !important;
+      }
+      .action.showcart .counter.qty {
+        background-color: @main_pink !important;
+      }
+    }
+    > .container {
+      border-bottom: 1px solid @dark_grey;
+    }
+  }
+  .top-link-container {
+    background-color: @main_pink !important;
+    border-bottom: 10px solid @main_brown;
+    .top-link {
+      a {
+        color: @main_brown !important;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.section-services {
+  margin-bottom: 30px;
+  .support-info {
+    border: 0 !important;
+    padding-bottom: 0 !important;
+    &:hover i::before {
+      color: @main_pink;
+    }
+    a:hover {
+      color: @main_pink;
+    }
+  }
+  .info-title {
+    line-height: 44px !important;
+    img {
+      width: 140px !important;
+    }
+    i {
+      display: inline-block !important;
+    }
+  }
+}
+
+.banner-top-home {
+  margin-top: 0 !important;
+}
+
+.box-new {
+  .rokan-newproduct {
+    .rokan-product-heading {
+      h2 {
+        color: @main_brown;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.block-cart-failed .action.continue,
+.cart-container .form-cart .action.continue,
+button,
+.cart.table-wrapper .actions-toolbar > .action,
+.cart.table-wrapper .action-gift,
+.action.primary,
+.review-form .action.submit.primary,
+.primary .action.primary,
+.actions .action.primary,
+.checkout.action.primary {
+  background-color: @main_brown;
+}
+
+#quickview-close {
+  background: @main_pink none repeat scroll 0 0 !important;
+}
+
+.product-item .product-info .price-box .price,
+.product-list-item .product-info .price-box .price,
+.product-view .product-info-main .price-box .price-wrapper .price,
+.quick-view-content .product-info-main .product-info-stock-sku .stock span {
+  color: @main_pink !important;
+}
+
+.product-item .product-info .price-box .old-price .price,
+.product-list-item .product-info .price-box .old-price .price {
+  color: @main_brown !important;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.product-item .product-info .price-box .old-price .price:before,
+.product-list-item .product-info .price-box .old-price .price:before,
+.product-view .product-info-main .price-box .old-price .price-container .price:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: @main_brown;
+
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+.cms-privacy-policy .page-title-wrapper .page-title span.base:before {
+  border-top: 3px solid @main_pink !important;
+}
+
+.page-footer {
+  .support-info {
+    vertical-align: middle !important;
+    .info-title {
+      vertical-align: middle !important;
+    }
+  }
+  .footer-static-container {
+    background: none !important;
+    background-color: @light_grey !important;
+    &::before {
+      background: none !important;
+    }
+    .footer-static {
+      h2 {
+        color: #000000 !important;
+        &::before {
+          background: none !important;
+        }
+      }
+      a:hover {
+        color: @main_pink;
+      }
+    }
+  }
+  #back-top {
+    top: -50px;
+    i {
+      background-color: @main_pink;
+    }
+  }
+}
+
+.block-cart-failed .action.continue,
+.cart-container .form-cart .action.continue,
+.cart.table-wrapper .actions-toolbar > .action,
+.cart.table-wrapper .action-gift,
+.action.primary,
+.review-form .action.submit.primary,
+.primary .action.primary,
+.actions .action.primary,
+.checkout.action.primary {
+  background-color: @main_brown !important;
+}
+
+.products-list .product-item .product-item-details .product-name a {
+  color: @main_brown;
+  font-size: 20px;
+}
+
+.breadcrumbs ul li strong,
+.product-view .product-info-stock-sku .stock span,
+.product-view .product-info-main .price-box .special-price .price-container .price,
+.product-view .product-info-stock-sku .attribute.sku .value,
+.product.info.detailed .product.data.items .item.title:hover a,
+.product.info.detailed .product.data.items .item.title.active a,
+.custommenu.navigation li.level0.fullwidth .submenu li.level1 > a:hover, .custommenu.navigation li.level0.staticwidth .submenu li.level1 > a:hover,
+.product-item .product-info .product-name a:hover, .product-list-item .product-info .product-name a:hover,
+.product-item .btn-add-to-cart:hover, .product-list-item .btn-add-to-cart:hover {
+  color: @main_pink !important;
+}
+
+.page-title-wrapper .page-title .base::before, .block.filter .page-title .base::before, .block-compare .page-title .base::before, .block-wishlist .page-title .base::before, .page-title-wrapper .filter-title .base::before, .block.filter .filter-title .base::before, .block-compare .filter-title .base::before, .block-wishlist .filter-title .base::before, .page-title-wrapper .block-title .base::before, .block.filter .block-title .base::before, .block-compare .block-title .base::before, .block-wishlist .block-title .base::before, .page-title-wrapper .page-title strong::before, .block.filter .page-title strong::before, .block-compare .page-title strong::before, .block-wishlist .page-title strong::before, .page-title-wrapper .filter-title strong::before, .block.filter .filter-title strong::before, .block-compare .filter-title strong::before, .block-wishlist .filter-title strong::before, .page-title-wrapper .block-title strong::before, .block.filter .block-title strong::before, .block-compare .block-title strong::before, .block-wishlist .block-title strong::before,
+.product.info.detailed .product.data.items .item.title::after {
+  border-top: 3px solid @main_pink !important;
+}
+
+.custommenu.navigation li.level0.fullwidth .submenu li.level1 > a::before, .custommenu.navigation li.level0.staticwidth .submenu li.level1 > a::before,
+.custommenu.navigation li.level0.fullwidth .submenu a::before, .custommenu.navigation li.level0.staticwidth .submenu a::before,
+.action.action-login.secondary:hover {
+  background: @main_pink none repeat scroll 0 0 !important;
+}
+
+.account-nav .item.current a, .account-nav .item.current strong {
+  border-color: @main_pink !important;
+}
+
+.product-item .newlabel::before, .product-list-item .newlabel::before {
+  border-color: transparent transparent @main_brown @main_brown;
+}
+
+.toolbar-products .modes-mode.active,
+.toolbar-products .pages .pages-items .item:hover a,
+.toolbar-products .pages .pages-items .item.current a,
+.toolbar-products .pages .pages-items .item:hover strong,
+.toolbar-products .pages .pages-items .item.current strong,
+.toolbar-products .modes-mode:not(.active):hover {
+  background: @main_pink none repeat scroll 0 0 !important;
+}
+
+.product-list {
+  .product-item-description {
+    h4 {
+      color: @main_brown;
+    }
+  }
+}
+
+.product-view {
+  .rokan-product-heading h2::after {
+    border: 0;
+  }
+  .view-product {
+    p {
+      color: @main_brown;
+    }
+    .pl-ingredienti {
+      color: @main_brown;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .pl-confezione {
+      color: @main_brown;
+    }
+    h6 {
+      color: @main_brown;
+    }
+    h4 {
+      font-size: 22px;
+      font-weight: 100;
+      color: @main_brown;
+      + p {
+        color: @main_brown;
+        strong {
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
+    h1.page-title {
+      &::after {
+        border-bottom: 0 !important;
+      }
+      span {
+        font-family: 'Roboto', sans-serif;
+        font-size: 55px;
+        font-weight: 100;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        line-height: 55px;
+        &::before {
+          border-top: 0 !important;
+        }
+      }
+    }
+    .product-info-main {
+      .price-box {
+        .old-price {
+          text-decoration: none;
+          .price-container {
+            position: relative;
+            .price {
+              color: @main_brown !important;
+            }
+          }
+        }
+      }
+      .product.attribute.overview {
+        margin-top: 0;
+        strong {
+          font-weight: 600;
+          font-size: 15px;
+        }
+      }
+    }
+    .product-add-form {
+      #product-addtocart-button {
+        height: 36px;
+        line-height: 36px;
+      }
+      .field.qty label {
+        line-height: 36px !important;
+      }
+      input.qty {
+        border: 1px solid @main_brown;
+        height: 36px !important;
+        line-height: 36px !important;
+      }
+    }
+    .attribute.sku {
+      display: none;
+    }
+    .product-info-stock-sku .stock span {
+      margin-left: 0;
+    }
+  }
+  .rokan-product-heading {
+    h2 {
+      text-align: center;
+      font-weight: 100;
+      font-size: 36px;
+      color: @main_brown;
+      text-transform: none;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+  .block.related {
+    h3.product-name {
+      a.product-item-link {
+        color: @main_brown;
+      }
+    }
+  }
+  /*.block.related {
+    .products-item {
+      border: 1px solid @main_brown;
+      .product-item {
+        padding: 0;
+        margin: 0 15px;
+      }
+    }
+  }*/
+  .pl-social-share {
+    .pl-social-label {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .pl-social-link {
+      font-size: 30px;
+      display: inline-block;
+      margin-left: 10px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.tocompare {
+  display: none !important;
+}
+
+.product-item .addto-links-icons .add-to-links li a:hover,
+.product-list-item .addto-links-icons .add-to-links li a:hover {
+  background: @main_pink none repeat scroll 0 0 !important;
+  border: 1px solid @main_pink !important;
+}
+
+// megamenu
+nav.navigation {
+  @media screen and (min-width: 768px) {
+    .subchildmenu a span {
+      width: 100%;
+      text-align: center;
+    }
+
+    .level0.parent:first-child {
+      .subchildmenu a {
+        min-height: 100px;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/spalmabili.jpg');
+        position: absolute;
+        top: -50px;
+        left: 16%;
+        max-width: 150px;
+      }
+      .subchildmenu .level1:nth-child(2) > a:before {
+        content: url('../images/vegan.jpg');
+        position: absolute;
+        top: -50px;
+        left: 16%;
+        max-width: 150px;
+      }
+      .subchildmenu .level1:last-child > a:before {
+        content: url('../images/frutta.jpg');
+        position: absolute;
+        top: -50px;
+        left: 15%;
+        max-width: 150px;
+      }
+    }
+
+    .level0.parent:nth-child(2) {
+      .subchildmenu a {
+        min-height: 180px;
+        position: relative;
+        @media (max-width: 767px) {
+          font-family: Oswald, sans-serif !important;
+          font-size: 14px !important;
+          text-transform: uppercase !important;
+        }
+        span {
+          position: absolute;
+          bottom: 36px;
+          font-family: Oswald, sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          left: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/paste-puro-bio.jpg');
+        position: absolute;
+        top: -20px;
+        left: 16%;
+        max-width: 150px;
+        @media (max-width: 767px) {
+          content: "";
+          width: 3px;
+          height: 15px;
+          position: relative;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .level0.parent:nth-child(6) {
+      .subchildmenu a {
+        min-height: 100px;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/topping.jpg');
+        position: absolute;
+        top: -50px;
+        left: 8%;
+        max-width: 150px;
+      }
+    }
+
+    .level0.parent:nth-child(3) {
+      .subchildmenu a {
+        min-height: 180px !important;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 36px;
+          font-family: Oswald, sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          left: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/miele.jpg');
+        position: absolute;
+        top: -15px;
+        left: 15%;
+        max-width: 150px;
+      }
+    }
+
+    .level0.parent:nth-child(4) {
+      .subchildmenu a {
+        min-height: 100px !important;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 0;
+          font-family: Oswald, sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          left: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/cioccolato-bio.jpg');
+        position: absolute;
+        top: -50px;
+        left: 23%;
+        max-width: 150px;
+      }
+      .subchildmenu .level1:last-child > a:before {
+        content: url('../images/caffe.jpg');
+        position: absolute;
+        top: -50px;
+        left: 24%;
+        max-width: 150px;
+      }
+    }
+
+    .level0.parent:nth-child(5) {
+      .subchildmenu a {
+        min-height: 180px !important;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 36px;
+          font-family: Oswald, sans-serif;
+          font-size: 14px;
+          text-transform: uppercase;
+          left: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/topping.jpg');
+        position: absolute;
+        top: -20px;
+        left: 16%;
+        max-width: 150px;
+      }
+    }
+
+    .level0.parent:last-child {
+      .subchildmenu a {
+        min-height: 100px;
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      .subchildmenu .level1:first-child > a:before {
+        content: url('../images/liquori-creme-seta.jpg');
+        position: absolute;
+        top: -50px;
+        left: 16%;
+        max-width: 150px;
+      }
+      .subchildmenu .level1:nth-child(2) > a:before {
+        content: url('../images/liquori-spirito-libero.jpg') !important;
+        position: absolute;
+        top: -50px;
+        left: 17%;
+        max-width: 150px;
+      }
+      .subchildmenu .level1:last-child > a:before {
+        content: url('../images/aceto.jpg');
+        position: absolute;
+        top: -50px;
+        left: 15%;
+        max-width: 150px;
+      }
+    }
+
+    .subchildmenu {
+      li.ui-menu-item {
+        span {
+          font-weight: 100;
+          color: @main_brown;
+        }
+      }
+    }
+  }
+}
+
+.product-item .product-info .product-name a,
+.product-list-item .product-info .product-name a {
+  color: @main_brown;
+}
+
+.catalog-category-view {
+  .pl-made-in-italy {
+    display: none;
+  }
+  .block.filter {
+    display: none;
+  }
+}
+
+.box-new {
+  margin-top: 20px !important;
+}
+
+.group-product {
+  .rokan-category-best, .rokan-onsaleproduct {
+    border-right: 1px solid @light_grey;
+    @media (max-width: 768px) {
+      border-right: 0;
+    }
+  }
+}
+
+.block-compare {
+  display: none;
+}
+
+// checkout
+.one-step-checkout {
+  h1.checkout_header::before {
+    border-top: 3px solid @main_pink !important;
+  }
+  h3 {
+    background: @main_pink none repeat scroll 0 0 !important;
+  }
+  button {
+    background-color: @main_brown;
+    &:hover {
+      background-color: @main_pink;
+    }
+  }
+  .totals-tax-summary {
+    background-color: @dark_grey;
+    th, td {
+      color: #ffffff !important;
+    }
+    > th {
+      padding-left: 8px !important;
+    }
+    > td span.price {
+      padding-right: 8px;
+    }
+  }
+  .totals-tax-details th {
+    padding-left: 20px !important;
+  }
+}
+
+.checkout-index-index {
+  #paypal_express + label.label {
+    a.action-help {
+      display: none;
+    }
+  }
+  li label {
+    position: relative;
+    em {
+      position: absolute;
+      right: -10px;
+      top: 0;
+    }
+  }
+  .modal-popup .modal-inner-wrap {
+    margin-left: 0 !important;
+    position: relative !important;
+    left: 33% !important;
+  }
+  /*#opcheckout-shipping-section {
+    [name="shippingAddress.vat_id"]{
+      display: none;
+    }
+  }*/
+}
+
+.pl-contacts {
+  .pl-contact-submit {
+    margin-left: 15px !important;
+    margin-top: 20px !important;
+  }
+  .row {
+    margin-bottom: 15px;
+  }
+  textarea {
+    height: 100px;
+  }
+}
+
+.navigation .level0 .submenu a:hover, .navigation .level0 .submenu a.ui-state-focus {
+  background: none;
+}
+
+.products-list .product-item .product-item-details .product-item-description {
+  color: @main_brown !important;
+}
+
+.product-item .newlabel, .product-list-item .newlabel {
+  background: @main_pink none repeat scroll 0 0 !important;
+}
+
+.product-item .newlabel::after, .product-list-item .newlabel::after {
+  border-color: @main_pink transparent transparent @main_pink !important;
+}
+
+.product-item .newlabel::before, .product-list-item .newlabel::before {
+  border-color: transparent transparent @main_pink @main_pink !important;
+}
+
+.page-footer .footer-static-container .footer-static .footer-links ul li a::before {
+  content: '' !important;
+}
+
+.pe-7s-world::before, .pe-7s-headphones::before, .pe-7s-refresh-2::before {
+  font-size: 40px;
+}
+
+[class^="pe-7s-"], [class*=" pe-7s-"] {
+  line-height: 40px !important;
+}
+
+
+// ribbon sconto
+.product-item .onsale::before,
+.product-list-item .onsale::before {
+  border-color: transparent transparent @main_pink @main_pink !important;
+  border-width: 11px 15px !important;
+  right: -29px !important;
+}
+
+.product-item .onsale::after,
+.product-list-item .onsale::after {
+  border-color: @main_pink transparent transparent @main_pink !important;
+  border-width: 11px 15px !important;
+  right: -29px !important;
+}
+
+.product-item .onsale, .product-list-item .onsale {
+  background: @main_pink none repeat scroll 0 0 !important;
+  min-width: 70px !important;
+  height: 40px !important;
+  font-size: 20px !important;
+  padding:4px 10px !important;
+  left: 15px !important;
+  right: auto !important;
+}
+
+
+// versione più piccola per i blocchi in home
+
+.product-item .onsale-little::before,
+.product-list-item .onsale-little::before {
+  content: '';
+  border-color: transparent transparent @main_pink @main_pink !important;
+  border-width: 9px 11px !important;
+  border-style: solid;
+  right: -22px !important;
+  position: absolute;
+}
+
+.product-item .onsale-little::after,
+.product-list-item .onsale-little::after {
+  content: '';
+  border-color: @main_pink transparent transparent @main_pink !important;
+  border-width: 9px 11px !important;
+  border-style: solid;
+  right: -19px !important;
+  position: absolute;
+  top: 0 !important;
+}
+.product-item .onsale-little, .product-list-item .onsale-little {
+  background: @main_pink none repeat scroll 0 0 !important;
+  min-width: 30px !important;
+  height: 20px !important;
+  font-size: 14px !important;
+  padding:1px 6px !important;
+  left: -16px !important;
+  right: auto !important;
+  transform: rotate(90deg) !important;
+  line-height: 12px !important;
+  color: @white;
+  display: block;
+  position: absolute;
+  top: 10px;
+  z-index: 14;
+}
+
+
+
+
+
+
+.pl-asterisk {
+  color: red;
+}
+
+.message.success {
+  background-color: #E5EFE5 !important;
+}
+
+.cms-page-view {
+  .page-main ul {
+    padding-left: 15px;
+  }
+  strong, b {
+    font-weight: bold !important;
+  }
+  .page-main ul, .page-main ol, .page-main li {
+    list-style: initial !important;
+  }
+}
+
+.nav-toggle::before {
+  color: @main_brown !important;
+}
+
+.pl-dove-siamo {
+  margin-top: 30px;
+  > div {
+    margin-bottom: 30px;
+  }
+}
+
+.header-container .header .block-search {
+  padding-top: 22px;
+  z-index: 10000;
+}
+
+.product-social-links .action:hover .fa, .product-social-links .action.mailto.friend:hover .fa {
+  background-color: @main_pink !important;
+}
+
+.cart.main.actions {
+  button.action:hover {
+    background-color: @main_pink;
+  }
+}
+
+#discount-coupon-form {
+  .actions-toolbar {
+    button.primary {
+      color: @white;
+      border: 0;
+      &:hover {
+        background-color: @main_pink !important;
+      }
+    }
+  }
+}
+
+.cart-container .checkout-methods-items button.primary:hover {
+  background-color: @main_pink !important;
+}
+
+.field.comment-box {
+  display: none;
+}
+
+.popup_avaiable {
+  .action_button {
+    button.btn-continue:hover {
+      background-color: @main_pink !important;
+    }
+    a.btn-viewcart:hover {
+      background-color: @main_pink !important;
+      color: @white !important;
+    }
+  }
+}
+
+// giorg 20170829 - in caso di annullamento in fase di pagamento con carta di credito, si torna ad una pagina in cui il titolo
+//                  è "Abbiamo ricevuto il tuo ordine". Purtroppo è iniettato dal controller, quindi lo nascondo e poi metto un titolo dal template checkout/onpage/failure
+
+.checkout-onepage-failure {
+  .page-title-wrapper {
+    display: none !important;
+    &.pl-title {
+      display: block !important;
+    }
+  }
+}
+
+.wishlist-index-index {
+  button:hover {
+    background-color: @main_pink;
+  }
+  .product-item-actions {
+    .edit {
+      display: none;
+    }
+  }
+}
+
+.wishlist-index-share {
+  textarea {
+    height: 135px;
+  }
+  button:hover {
+    background-color: @main_pink;
+  }
+  .sidebar {
+    .block-wishlist {
+      display: none;
+    }
+  }
+}
+
+.header-container .header .block-search .block-content .dropdown .top-search {
+  padding-top: 4px;
+  .pe-7s-search {
+    color: @main_brown !important;
+  }
+}
+
+.header-container .header .block-search .block-content .dropdown input {
+  color: @main_brown !important;
+}
+
+.product-list.row {
+  .product-item-details {
+    padding-top: 40px;
+  }
+  .product-photo {
+    .product-image-container {
+      img.product-image-photo {
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+.account.sales-order-view {
+  .price-including-tax, .price-excluding-tax {
+    font-size: 14px;
+  }
+  .price {
+    font-weight: 300;
+  }
+
+  strong:not(.product-item-name) {
+    font-weight: 700;
+  }
+}
+
+.account.customer-address-index {
+  .box.box-address-shipping {
+    margin-top: 20px;
+  }
+  strong {
+    font-weight: 700;
+  }
+}
+
+// pagina carrello
+.checkout-cart-index {
+  .cart-container {
+    .product-item-details {
+      text-align: left;
+    }
+  }
+  #block-shipping {
+    display: none;
+  }
+}
+
+.block-minicart .block-content > .actions .viewcart:hover {
+  border-color: @main_pink !important;
+}
+
+.quick-view-content {
+  .pl-social-share {
+    .pl-social-label {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .pl-social-link {
+      font-size: 30px;
+      display: inline-block;
+      margin-left: 10px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.product-info-main .product.attribute.sku {
+  display: none;
+}
+
+body.account .sidebar nav.account-nav ul.items li:nth-child(4) {
+  display: none;
+}
+
+.owl-theme .owl-controls .owl-buttons > div:hover {
+  background-color: @main_brown;
+}
+
+.quick-view-content .product-info-main .product-info-stock-sku .stock span {
+  margin-left: 0 !important;
+}
+
+.product-slider-wrapper {
+  float: none;
+}
+
+.pl-iva-inclusa {
+  color: @main_pink;
+  padding-left: 10px;
+}
+
+.account.sales-order-view {
+  .items {
+    .nav {
+      display: none;
+    }
+  }
+}
+
+
+.product-item .product-info .price-box .old-price, .product-list-item .product-info .price-box .old-price{
+  clear: both !important;
+}
+
+.cms-homepage {
+  .featuredproductslider-item {
+    .old-price {
+      clear: left;
+      float: left !important;
+    }
+  }
+}
+
+.products-list {
+  .product.description {
+    strong {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}
+
+.header-container .header .block-search .block-content .dropdown .dropdown-menu {
+  top: -40px;
+}
+
+.header-container .header .logo img {
+  width: 250px;
+}
+
+#hb-cc-wrap {
+  background: #ffffff;
+  border-bottom: 10px solid @main_brown;
+  text-align: justify;
+  #hb-cc-ll {
+    display: none;
+  }
+  #hb-cc-hide {
+    background-color: transparent;
+    color: @main_brown;
+    padding: 5px 8px;
+    float: right;
+    margin-top: -5px;
+  }
+  .pl-cookie_ok {
+    text-decoration: underline;
+  }
+  .pl-cookie-privacy {
+    text-decoration: underline;
+  }
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.pl-additional-attributes {
+  max-width: 300px;
+}
+.pl-valori-nutrizionali {
+  .title {
+    text-align: center;
+    font-weight: 600;
+  }
+  .value {
+    text-align: right;
+  }
+}
+
+.pl-proprieta-alimentari {
+  margin-bottom: 20px;
+  .pl-prop-alimentare {
+    display: inline-block;
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.pl-made-in-italy {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+h5.pl-sku {
+  font-weight: normal;
+  color: @main_brown;
+  font-size: 13px;
+}
+
+.totals-tax, .totals-tax-summary {
+  display: none;
+}
+
+
+.pl-popup-newsletter {
+  color: @dark_grey;
+  input[type="submit"] {
+    background-color: @main_brown;
+    color: @white;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    border:0;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  .pl-privacy {
+    font-size: 10px;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.pl-banner-newsletter {
+  background-color: @black;
+  color: @light_grey;
+  margin-top: 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  input[type="email"] {
+    width: 250px;
+    background-color: transparent;
+    border: 1px solid @light_grey;
+  }
+  input[type="submit"] {
+    background-color: @main_brown;
+    color: @white;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    border:0;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  .pl-privacy {
+    font-size: 10px;
+    a {
+      color: @light_grey;
+      text-decoration: underline;
+    }
+  }
+  .pl-img-ipad {
+    position: absolute;
+    @media screen and (max-width: 768px) {
+      position: relative;
+    }
+  }
+}
+
+.page-footer #back-top {
+  top: 174px;
+  @media (max-width: 768px) {
+    top: 206px;
+  }
+}
+
+.gdpr {
+
+}
+
+
+
+
+
+/*****************************/
+/******* MEDIA QUERY *********/
+/*****************************/
+@media (max-width: 992px) {
+  .logo-footer, .page-footer .footer-static-container .footer-static .footer-links h2 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list .product-photo .product-image-photo {
+    height: auto;
+  }
+  .cms-homepage {
+    .box-banner-middle {
+      display: none;
+    }
+    .rokan-product-heading {
+      margin-top: 0;
+      h2 {
+        text-align: center !important;
+      }
+    }
+    .rokan-category-best {
+      .owl-carousel {
+        margin-left: 200px;
+        @media (max-width: 480px) {
+          margin-left: 50px;
+        }
+        @media (max-width: 320px) {
+          margin-left: 0;
+        }
+      }
+    }
+    .rokan-onsaleproduct {
+      .owl-carousel {
+        margin-left: 200px;
+        @media (max-width: 480px) {
+          margin-left: 50px;
+        }
+        @media (max-width: 320px) {
+          margin-left: 0;
+        }
+      }
+    }
+    .rokan-mostviewed {
+      .owl-carousel {
+        margin-left: 200px;
+        @media (max-width: 480px) {
+          margin-left: 50px;
+        }
+        @media (max-width: 320px) {
+          margin-left: 0;
+        }
+      }
+    }
+    .product-info {
+      max-width: 300px;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .cart.table-wrapper .product-item-photo {
+    right: 0 !important;
+    left: auto;
+  }
+  .pl-contacts {
+    .col-sm-3 {
+      display: none;
+    }
+  }
+  .navigation .ui-menu-item a span {
+    color: @white;
+  }
+
+  .custommenu.navigation li.level0.fullwidth .submenu a, .custommenu.navigation li.level0.staticwidth .submenu a {
+    padding: 8px 5px !important;
+  }
+
+  .custommenu.navigation li.level0.fullwidth > .submenu {
+    padding: 0 30px !important;
+  }
+
+  .navigation .submenu:not(:first-child) ul > li a {
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    font-family: 'Oswald', sans-serif !important;
+    &:before {
+      content: "";
+      width: 3px;
+      height: 15px;
+      background: @main_pink;
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  .header-container .header .logo img {
+    width: 207px !important;
+    margin-left: 40px;
+  }
+
+  .header-container .header .col-md-9.col-sm-9.col-xs-5.col-menu {
+    margin-top: 0;
+  }
+  .page-footer .footer-static-container .footer-static .footer-links .title:hover:after {
+    background: @main_pink !important;
+  }
+  .cart.table-wrapper .cart.items .col .product-item-name {
+    padding-left: 8px;
+    margin-top: 15px !important;
+  }
+}
+
+@media (max-width: 640px) {
+
+
+  .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison)>tbody>tr td:before, .table-wrapper .table:not(.cart):not(.totals):not(.table-comparison)>tbody>tr th:before {
+    display: none;
+  }
+  .catalog-product-view {
+    .pl-valori-nutrizionali {
+      td {
+        display: table-cell !important;
+      }
+      td.propname {
+        padding-left: 10px !important;
+        padding-top: 0 !important;
+      }
+    }
+    h1.page-title {
+      span {
+        font-size: 32px !important;
+      }
+    }
+    .product-media {
+      .main-img-quickview {
+        a {
+          text-align: center;
+          img {
+            max-width: 60%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .section-services {
+    .col-xs-4 {
+      width: 100% !important;
+    }
+  }
+  .minicart-items .product-item-name a {
+    max-width: 95%;
+    display: inline-block;
+  }
+  .box-new .rokan-newproduct .rokan-product-heading h2 {
+    margin-bottom: 0;
+  }
+  .cms-homepage {
+    .rokan-product-heading.rokan-onsale-heading {
+      margin-bottom: 0 !important;
+    }
+    .banner-top-home {
+      margin-bottom: 0 !important;
+    }
+    .product-item .product-info {
+      text-align: center !important;
+    }
+    .rokan-product-heading .short_desc {
+      margin-bottom: 0;
+    }
+    .rokan-product-heading.rokan-category-best-heading {
+      margin-top: 0;
+    }
+    .group-product .rokan-product-heading h2 {
+      text-align: center;
+    }
+    .box-banner-middle {
+      display: none;
+    }
+    .rokan-newproduct.block {
+      margin-bottom: 40px;
+    }
+  }
+
+  .catalog-product-view {
+    h1.page-title {
+      span {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 413px) {
+  .header-container .top-link-container .top-link {
+    line-height: 30px;
+    li {
+      line-height: 30px;
+    }
+  }
+  .catalog-product-view {
+    .product-social-links {
+      > .row {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .header-container .top-link-container .top-link a {
+    font-size: 9px;
+  }
+  .product-view .rokan-product-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    h2 {
+      font-size: 28px;
+      padding-bottom: 0;
+    }
+
+  }
+}

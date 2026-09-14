@@ -1,0 +1,44 @@
+# Environment-specific configuration and Magento runtime
+/app/etc/env.php
+/var/*
+/generated/
+/pub/static/*
+!/pub/static/.htaccess
+
+# Runtime media and imports. Version only intentional theme/media assets.
+/pub/media/*
+!/pub/media/.htaccess
+!/pub/media/rokanthemes/
+/pub/media/rokanthemes/*
+!/pub/media/rokanthemes/theme_option/
+/pub/media/rokanthemes/theme_option/*
+!/pub/media/rokanthemes/theme_option/custom_it.css
+
+# Dependencies are installed from composer.lock; do not add new vendor files.
+/vendor/
+
+# Operational data, backups and exports
+/database/
+/script/exported/
+/script/order_*.xml
+/script2/
+/.cache/
+/composer.phar
+/LIQUORI-*.jpg
+/README.md
+/pub/robots.txt
+/pub/sitemap.xml
+/sitemap.xml
+* backup *.csv
+*.sql
+*.accdb
+
+# Local/editor artifacts
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*.orig.php
+*.old
+*~

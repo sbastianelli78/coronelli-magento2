@@ -1,0 +1,14 @@
+./pestle.phar magento2:generate:module Hoop Contacts 0.0.1
+./pestle.phar magento2:generate:crud-model Hoop_Contacts Contact
+./pestle.phar magento2:generate:acl Hoop_Contacts Hoop_Contacts::contacts
+./pestle.phar magento2:generate:menu Hoop_Contacts "" Hoop_Contacts::contacts Magento_Customer::customer "Contacts contacts" hoop_contacts_contacts/index/index 10
+./pestle.phar magento2:generate:menu Hoop_Contacts Hoop_Contacts::contacts Hoop_Contacts::contacts_list Hoop_Contacts::contacts "Contact Objects" hoop_contacts_contacts/index/index 10
+./pestle.phar magento2:generate:route Hoop_Contacts adminhtml hoop_contacts_contacts Index Index
+./pestle.phar magento2:generate:view Hoop_Contacts adminhtml hoop_contacts_contacts_index_index Main content.phtml 1column
+./pestle.phar magento2:generate:ui:grid Hoop_Contacts hoop_contacts_contacts 'Hoop\Contacts\Model\ResourceModel\Contact\Collection' hoop_contacts_contact_id
+./pestle.phar magento2:generate:ui:add-column-text app/code/Hoop/Contacts/view/adminhtml/ui_component/hoop_contacts_contacts.xml title "Title"
+./pestle.phar magento2:generate:ui:form Hoop_Contacts 'Hoop\Contacts\Model\Contact' Hoop_Contacts::contacts
+./pestle.phar magento2:generate:ui:add_to_layout app/code/Hoop/Contacts/view/adminhtml/layout/hoop_contacts_contacts_index_index.xml content hoop_contacts_contacts
+./pestle.phar magento2:generate:acl:change_title app/code/Hoop/Contacts/etc/acl.xml Hoop_Contacts::contacts "Manage contacts"
+./pestle.phar magento2:generate:controller_edit_acl app/code/Hoop/Contacts/Controller/Adminhtml/Index/Index.php Hoop_Contacts::contacts
+./pestle.phar magento2:generate:remove-named-node app/code/Hoop/Contacts/view/adminhtml/layout/hoop_contacts_contacts_index_index.xml block hoop_contacts_block_main

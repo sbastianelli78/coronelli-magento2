@@ -1,0 +1,9 @@
+.config-nav-block.hellobrave-tab strong:before {
+    background: url(../images/logo.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}

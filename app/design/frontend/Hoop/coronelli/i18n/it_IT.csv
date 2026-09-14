@@ -1,0 +1,132 @@
+"We can't find products matching the selection.","We can't find products matching the selection."
+Bestseller,"I più venduti"
+"Add to Cart","Add to Cart"
+"In stock","In stock"
+"Out of stock","Out of stock"
+"Add to Wish List","Add to Wish List"
+"Add to Compare","Add to Compare"
+"Learn More","Learn More"
+Mostviewed,"I più visti"
+"Quick view","Quick view"
+Sale,Sale
+New,New
+"Related Products","Related Products"
+"Upsell Products","Upsell Products"
+"More Choices:","More Choices:"
+"New Products","New Products"
+"upsell products","upsell products"
+"Quantity :","Quantity :"
+Quantity,Quantity
+Availability,Availability
+"My Cart","My Cart"
+"* Required Fields","* Required Fields"
+Name,Name
+Email,Email
+"Phone Number","Phone Number"
+"What’s on your mind?","What’s on your mind?"
+Submit,Submit
+"Send your message","Send your message"
+Currency,Currency
+"Your current currency is: %1.","Your current currency is: %1."
+Continue,Continue
+"Enter your email address","Enter your email address"
+Subscribe,Subscribe
+Search,Search
+"Search entire store here...","Search entire store here..."
+"There are no search terms available.","There are no search terms available."
+"Your Language:","Your Language:"
+"Your Language","Your Language"
+Language,Language
+"Select Store","Select Store"
+Home,Home
+Blog,Blog
+"There are no products matching the selection.","There are no products matching the selection."
+Days,Days
+Hrs,Hrs
+Mins,Mins
+Secs,Secs
+"Do not show this popup again","Do not show this popup again"
+none,none
+Overview,Overview
+Details,Details
+"More Information","More Information"
+"We'll send your order confirmation here.","We'll send your order confirmation here."
+"For delivery questions.","For delivery questions."
+"Payment","Metodi di pagamento"
+"Order Review","Rivedi ordine"
+"You may also be interested in...","Potrebbe interessarti anche..."
+"Tailoring","Confezione"
+"My account","Il mio account"
+"My cart","Carrello"
+"I consent to the processing of my personal data for marketing purposes as described in this ","Fornisco il consenso per il trattamento dei dati personali per finalità di marketing come indicato nella "
+"policy statement","presente informativa"
+"I authorise the processing of my data in order to follow up my request. Personal data will be processed as described in this ","Autorizzo il trattamento dei miei dati al fine di dare seguito alla mia richiesta. I dati personali saranno trattati come indicato nella "
+Firstname,Nome
+Lastname,Cognome
+"Contact us","Contattaci"
+"New message from Coronelli e-commerce","Nuovo messaggio da e-commerce Coronelli"
+"View cart &amp; checkout","Carrello e checkout"
+"You added %1 to your shopping cart.","Hai aggiunto %1 al tuo carrello."
+"Sign Up for Newsletter","Autorizzo al trattamento del mio nome ed indirizzo mail per l'iscrizione alla newsletter"
+"Thanks for contacting us. We'll answer as soon as possible.","Grazie per averci contattato. Ti risponderemo al più presto."
+"Minimum length of this field must be equal or greater than 8 symbols. Leading and trailing spaces will be ignored.","La password deve contenere: caratteri minuscoli, caratteri maiuscoli, numeri e caratteri speciali."
+"Add to cart","Aggiungi al carrello"
+"Quantity :","Quantità:"
+"Adding","Aggiungi al carrello"
+"Forgot Your Password","Password dimenticata"
+"Thanks for contacting us","Grazie per averci contattato"
+"See below the data you inserted.","Di seguito trovi il riepilogo dei dati inseriti."
+"Our assistance will answer within 24/48 hours.","La nostra Assistenza Clienti ti risponderà al numero 0541.370616 dal lunedì al venerdì dalle 08:30 alle 17:30."
+"Please do not answer to this e-mail, if you have questions you can fill the","Ti preghiamo di non rispondere a questa email generata automaticamente, se hai domande puoi compilare il form"
+"form on our website","del nostro sito web"
+"contacts","contatti"
+"We received a request to change your password.","Abbiamo ricevuto una richiesta di modifica della password per il tuo account."
+"If it was you requesting the reset, please click on the following button:","Se sei stato tu a richiedere questa modifica, premi sul link seguente per fare il reset della password:"
+"If you did not make this request, you can ignore this email and your password will stay the same.","Se non hai fatto tu questa richiesta, puoi ignorare questo messaggio e la tua password rimarrà invariata."
+"Dear","Gentile"
+"Welcome to Coronelli shop","Benvenuto nel negozio Coronelli"
+"To sign in, when you browse to our site, use these credentials during checkout or on the","Per accedere, quando visiti il nostro sito, basta cliccare su"
+"link in the corner up right","in alto a destra in ogni pagina, poi inserire il tuo indirizzo e-mail e la tua password"
+"Here are the advantages of using your account:","Ecco i vantaggi di cui puoi godere effettuando l’accesso al tuo account:"
+"Quicker checkout when you buy","Passare attraverso checkout più veloci quando effettui un acquisto"
+"Verify the status of orders","Verificare lo stato degli ordini"
+"View previous orders","Visualizzare gli ordini precedenti"
+"Modify your account data","Modificare le informazioni relative al tuo account"
+"Change your password","Cambiare la tua password"
+"Save multiple address (to ship to friends and family)","Memorizzare indirizzi alternativi (per spedire a più membri della famiglia ed agli amici!)"
+"Save products in your wishlist","Salvare gli articoli nella tua Lista desideri"
+"Reset Password","Resetta password"
+"welcome","benvenuto"
+"Thanks for subscribing to Coronelli newsletter","Grazie per esserti iscritto alla newsletter Coronelli"
+"Thanks for subscribing to our newsletter!","Grazie per esserti iscritto alla nostra newsletter!"
+"We look forward to see you on our e-Shop!","Ti aspettiamo sul nostro e-Shop!"
+"order_new_before_footer","Se hai domande sul tuo ordine ti preghiamo di compilare il form del nostro sito web, ricordandoti sempre di inserire nel testo del messaggio il numero del tuo ordine. La nostra Assistenza Clienti ti risponderà al numero 0541.370616 dal lunedì al venerdì dalle 08:30 alle 17:30."
+"thanks for your order.","grazie per il tuo ordine."
+"Shipping Address","Indirizzo di spedizione"
+"Product","Prodotti"
+"Qty","Qtà"
+"Subtotal","Subtotale"
+"Take a look at %customer_name's Wish List","Dai un'occhiata alla lista dei desideri di %customer_name",module,Magento_Wishlist
+"Move to Wishlist","Sposta nella lista desideri",module,Magento_Wishlist
+"Please wait, processing your order...","Attendi un momento, stiamo processando il tuo ordine.",module,Rokanthemes_OpCheckout
+"Cash on delivery","Pagamento in contrassegno"
+"You will be charged by an extra fee of %1 (+%2 taxes)","Ci sarà un costo ulteriore di %1"
+"SKU","Codice articolo"
+"Share on","Condividi su"
+"Place order now","Effettua ordine",module,Rokanthemes_OpCheckout
+"SKU","Codice articolo",module,Rokanthemes_QuickView
+Description,Descrizione
+"Do you want to remove the item from cart?","Vuoi eliminare l'articolo dal carrello?"
+"Thanks for your order!","Grazie per il tuo ordine!"
+"Please enter the same value again.","Inserisci lo stesso valore."
+"Minimum length of this field must be equal or greater than %1 symbols. Leading and trailing spaces will be ignored.","La lunghezza minima di questo campo deve essere uguale o maggiore di %1 caratteri. Spazi iniziali e finali verranno ignorati.",module,Magento_Ui
+"pl-dashboard-title","Riepilogo account"
+"pl-vai-alla-cassa","Vai alla cassa"
+"Please use only letters (a-z or A-Z) or numbers (0-9) in this field. No spaces or other characters are allowed.","Utilizza solo lettere (a-z o A-Z) o numeri (0-9) in questo campo. Nessuno spazio o altri caratteri sono consentiti.",module,Magento_Ui
+"spedizioni-estero","Per spedizioni fuori dall'Italia, inviare una richiesta via e-mail all'indirizzo"
+"pl-login","Accedi"
+"pl-wishlist","Wishlist"
+"Please enter a valid email address (Es: johndoe@domain.com).","Inserisci un indirizzo email valido (es: mariorossi@dominio.it)"
+"Please enter more or equal than {0} symbols.","Inserisci un numero di simboli maggiori o uguali a {0}."
+"Nutritional values","Valori nutrizionali"
+"No products in offer.","Non ci sono prodotti in offerta al momento."

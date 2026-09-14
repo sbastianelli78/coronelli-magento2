@@ -1,0 +1,77 @@
+<div class="header-container">
+	<div class="top-link-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 top-bar">
+					<?php echo $this->getChildHtml("store_switcher"); ?>
+					<?php echo $this->getChildHtml("store_language"); ?>
+					<?php echo $this->getChildHtml("currency"); ?>
+					<?php echo $this->getChildHtml("social_header"); ?>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 end-top-bar">
+					 <?php //echo $this->getChildHtml("top.search"); ?>
+					 <?php //echo $this->getChildHtml("minicart");?>
+					 <?php // echo $this->getChildHtml("top_link"); ?>
+                    <ul class="top-link">
+                        <li>
+                            <a href="<?php echo $block->getUrl('customer/account') ?>"><?php echo __('My account'); ?></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $block->getUrl('wishlist/index/index') ?>"><?php echo __('pl-wishlist'); ?></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $block->getUrl('checkout/cart') ?>"><?php echo __('My cart'); ?></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $block->getUrl('checkout') ?>"><?php echo __('Checkout'); ?></a>
+                        </li>
+                        <?php
+                        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+                        $customerSession = $objectManager->get('Magento\Customer\Model\Session');
+                        ?>
+                        <li>
+                            <?php if ($customerSession->isLoggedIn()): ?>
+                            <a href="<?php echo $block->getUrl('customer/account/logout') ?>"><?php echo __('Logout'); ?></a>
+                            <?php else: ?>
+                                <a href="<?php echo $block->getUrl('customer/account/login') ?>"><?php echo __('pl-login'); ?></a>
+                            <?php endif; ?>
+                        </li>
+                    </ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-7 col-logo">
+					<?php echo $this->getChildHtml("logo"); ?>
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-5 col-menu">			
+					<?php echo $this->getChildHtml("minicart");?>
+					<?php echo $this->getChildHtml("top.search"); ?>
+					<?php echo $this->getChildHtml("top.navigation.sections"); ?>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery'],function($){
+        $(document).ready(function($){
+			$(window).scroll(function() {
+				var num = $('.header-container').outerHeight();
+				var screenWidth = $(window).width();
+				
+				if ($(this).scrollTop() > num && screenWidth >= 768 ){  
+					$(".header").addClass("sticky");
+				}
+				else{
+					$(".header").removeClass("sticky");
+				}
+			});
+		});
+    });
+</script>

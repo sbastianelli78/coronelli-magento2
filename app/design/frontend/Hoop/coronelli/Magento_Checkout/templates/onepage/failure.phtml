@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<div class="page-title-wrapper pl-title">
+    <h1 class="page-title">
+        <span class="base" data-ui-id="page-title-wrapper">Ordine annullato</span>
+    </h1>
+</div>
+
+<?php if ($block->getRealOrderId()) : ?><p><?php /* @escapeNotVerified */ echo __('Order #') . $block->getRealOrderId() ?> annullato.</p><?php endif ?>
+<?php if ($error = $block->getErrorMessage()) : ?><p><?php /* @escapeNotVerified */ echo $error ?></p><?php endif ?>
+
+
+<p><a href="/">Torna</a> alla home.</p>

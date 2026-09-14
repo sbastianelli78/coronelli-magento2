@@ -1,0 +1,24 @@
+{
+    "name": "webgriffe/lib-quipago",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Webgriffe SRL",
+            "email": "support@webgriffe.com"
+        }
+    ],
+    "require": {
+        "psr/log": "^1.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "respect/validation": "^1.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.5",
+        "phpspec/phpspec": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webgriffe\\LibQuiPago\\": "src/"
+        }
+    }
+}

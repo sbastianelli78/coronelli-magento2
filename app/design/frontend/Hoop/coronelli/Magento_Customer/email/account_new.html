@@ -1,0 +1,46 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject Shop Coronelli: {{trans "welcome"}} {{var customer.name}}! @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+
+
+{{template config_path="design/email/header_template"}}
+
+<h1>{{trans "Welcome to Coronelli shop"}}!</h1>
+
+<p>
+    {{trans "To sign in, when you browse to our site, use these credentials during checkout or on the"}} <a href="{{var this.getUrl($store, 'customer/account/') }}">{{trans "My Account"}}</a> {{trans "link in the corner up right"}}:
+</p>
+<ul>
+    <li><strong>{{trans "Email:"}}</strong> {{var customer.email}}</li>
+    <li><strong>{{trans "Password:"}}</strong> <em>{{trans "Password you set when creating account"}}</em></li>
+</ul>
+<!--<p>
+    {{trans
+        'Forgot your account password? Click <a href="%reset_url">here</a> to reset it.'
+
+        reset_url="$this.getUrl($store,'customer/account/createPassword/',[_query:[id:$customer.id,token:$customer.rp_token],_nosid:1])"
+    |raw}}
+</p>-->
+<p>{{trans "Here are the advantages of using your account:"}}</p>
+<ul>
+    <li>{{trans "Quicker checkout when you buy"}}</li>
+    <li>{{trans "Verify the status of orders"}}</li>
+    <li>{{trans "View previous orders"}}</li>
+    <li>{{trans "Modify your account data"}}</li>
+    <li>{{trans "Change your password"}}</li>
+    <li>{{trans "Save multiple address (to ship to friends and family)"}}</li>
+    <li>{{trans "Save products in your wishlist"}}</li>
+</ul>
+
+<p>{{trans "Please do not answer to this e-mail, if you have questions you can fill the"}} <a href="{{store url=""}}hoop_contacts">{{trans "contacts"}}</a> {{trans "form on our website"}}</p>
+
+{{template config_path="design/email/footer_template"}}

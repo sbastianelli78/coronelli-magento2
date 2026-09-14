@@ -1,0 +1,29 @@
+{
+    "name": "hellobrave/core",
+    "description": "Magento 2 extension to support and register all other HelloBrave Magento 2 extensions.",
+    "type": "magento2-module",
+    "version": "1.0.1",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/module-config": "*",
+        "magento/module-store": "*",
+        "magento/module-backend": "*",
+        "magento/framework": "*"
+    },
+    "authors": [{
+        "name": "HelloBrave",
+        "email": "dev@hellobrave.com",
+        "homepage": "http://www.hellobrave.com/",
+        "role": "Developer"
+    }],
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "HelloBrave\\Core\\": ""
+        }
+    }
+}

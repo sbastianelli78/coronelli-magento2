@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \Magento\Theme\Block\Html\Title
+ */
+$cssClass = $block->getCssClass() ? ' ' . $block->getCssClass() : '';
+$title = $block->getPageHeading();
+if (trim($block->getPageHeading())) {
+    $title = '<span class="base" data-ui-id="page-title-wrapper" ' .  $block->getAddBaseAttribute() . '>'
+        . $block->escapeHtml($block->getPageHeading()) . '</span>';
+}
+?>
+
+<?php if ($title): ?>
+<div class="page-title-wrapper<?php /* @escapeNotVerified */ echo $cssClass; ?>">
+    <h1 class="page-title"
+        <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
+        <?php if ($block->getAddBaseAttributeAria()): ?>
+            aria-labelledby="<?php /* @escapeNotVerified */ echo $block->getAddBaseAttributeAria(); ?>"
+        <?php endif; ?>>
+        <?php if ($block->getPageHeading() == "Dashboard"): ?>
+            <?php /* @escapeNotVerified */ echo __('pl-dashboard-title') ?>
+        <?php else: ?>
+            <?php /* @escapeNotVerified */ echo $title ?>
+        <?php endif; ?>
+    </h1>
+    <?php echo $block->getChildHtml(); ?>
+</div>
+<?php endif; ?>
+
+<?php // giorg 20170926 - sottotitolo
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$mediaPath = $objectManager->get('Magento\Store\Model\StoreManagerInterface')
+    ->getStore()
+    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+$_product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');
+?>
+<?php if (is_object($_product) && $_product->load($_product->getId())->getSubtitle()): ?>
+    <h4 class="pl-subtitle"><?php echo $_product->load($_product->getId())->getSubtitle(); ?></h4>
+<?php endif; ?>
+
+<?php if (is_object($_product) && $_product->load($_product->getId())->getMadeInItaly()): ?>
+<img src="<?php echo $mediaPath; ?>madeitaly.jpg" class="pl-made-in-italy" />
+<?php endif; ?>

@@ -1,0 +1,3 @@
+rm -rf var/cache/ var/di var/generation/ var/view_preprocessed/
+php bin/magento cache:clean
+chown www-data:www-data . -R

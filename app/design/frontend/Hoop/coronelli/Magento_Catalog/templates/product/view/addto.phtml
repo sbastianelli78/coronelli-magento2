@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View*/
+?>
+<?php
+$_product = $block->getProduct();
+$_wishlistSubmitParams = $this->helper('Magento\Wishlist\Helper\Data')->getAddParams($_product);
+$compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
+?>
+<div class="row">
+    <div class="product-addto-links col-sm-7 col-xs-1" data-role="add-to-links">
+        <?php if ($this->helper('Magento\Wishlist\Helper\Data')->isAllow()) : ?>
+            <a href="#"
+                title="Add to Wishlist"
+                class="action towishlist"
+                data-post='<?php /* @escapeNotVerified */ echo $_wishlistSubmitParams; ?>'
+                data-action="add-to-wishlist"><i class="fa fa-heart-o"></i></a>
+        <?php endif; ?>
+        <a href="#"
+            title="Add to Compare"
+            data-post='<?php /* @escapeNotVerified */ echo $compareHelper->getPostDataParams($_product);?>'
+            data-role="add-to-links"
+            class="action tocompare"><i class="fa fa-sliders"></i></a>
+
+
+    </div>
+    <div class="pl-social-share text-right col-sm-5">
+        <span class="pl-social-label"><?php echo __('Share on'); ?></span>
+        <a class="pl-social-link" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $this->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]) ?>" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a target="_blank" class="pl-pinterestlink pl-social-link" data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?php echo $this->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]) ?>" data-pin-custom="true">
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "addToWishlist": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($block->getWishlistOptions())?>
+        }
+    }
+</script>

@@ -1,0 +1,14 @@
+/var/*
+!/var/.htaccess
+/vendor
+/.buildpath
+/.cache
+/.metadata
+/.project
+/.settings
+atlassian*
+/.idea
+/.gitattributes
+
+# Generated integration-test installation; never version credentials.
+/dev/tests/integration/tmp/
