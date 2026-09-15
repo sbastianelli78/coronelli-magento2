@@ -9,23 +9,74 @@ were nested repositories without a usable `.gitmodules` mapping. Their
 deployed contents are therefore versioned as normal directories in this
 baseline, so a fresh clone contains all required source files.
 
+## Platform constraints
+
+- Application root: `/cicd/m2`
+- Magento: 2.1.7
+- PHP CLI: 5.6.40
+- Composer: 1.10.x
+
+The deployment account cannot upgrade PHP, Magento, or system packages. Treat
+runtime upgrades as a separate infrastructure project.
+
 ## Before a deployment
 
 1. Confirm the working tree is clean and record the commit SHA.
 2. Synchronize only versioned code and explicitly preserve `app/etc/env.php`,
    `var/`, and runtime media.
-3. Create a recoverable copy of `pub/static` and `var/generation` on the
-   target or keep an equivalent verified release copy.
-4. Run `php bin/magento setup:di:compile` from `/cicd/m2`.
-5. Check `php bin/magento cache:status` and the public homepage.
+3. Build in a sibling release directory with independent `var/` and
+   `pub/static/`; never compile against the active static directory.
+4. Check the generated CSS, RequireJS, Knockout templates, and asset URLs.
+5. Stage the complete theme directory next to the active release.
+6. Keep the previous active theme directory as a rollback copy.
 
 ## Static content
 
-Do not run static-content deployment blindly on the live build. It overwrites
-the active CSS and JavaScript. Run it only after a visual check in a controlled
-window and with the preceding static files available for rollback.
+The command verified for the Coronelli theme is:
+
+```bash
+php bin/magento setup:static-content:deploy \
+  --theme Hoop/coronelli \
+  --language it_IT \
+  --area frontend \
+  --jobs=1 \
+  --no-interaction
+```
+
+Run it only in the isolated release directory. A valid result currently ends
+with zero errors and generates the theme CSS, `requirejs/require.js`, and the
+checkout templates under:
+
+```text
+pub/static/frontend/Hoop/coronelli/it_IT/
+```
+
+Copy the complete generated theme to a staging directory on the same
+filesystem as the live theme. Verify hashes for `styles-m.css`, `styles-l.css`,
+and `requirejs/require.js`, then activate it by renaming directories. Update
+`pub/static/deployed_version.txt` only after the complete release is staged.
+Finally run:
+
+```bash
+php bin/magento cache:clean layout block_html full_page
+```
+
+Do not patch files directly in `pub/static`: production changes must originate
+from the theme source and pass through the isolated build.
+
+## Smoke test
+
+Verify HTTP responses for the homepage, cart, one product page, both main CSS
+files, RequireJS, and any changed Knockout template. Confirm that the HTML uses
+the new static version before considering the release complete.
 
 ## Rollback
 
-Restore the prior release code plus its matching `pub/static` and
-`var/generation` artifacts, then validate the homepage and Magento CLI.
+Rename the saved theme directory back into place, restore its matching
+`deployed_version.txt`, clean `layout`, `block_html`, and `full_page`, then
+repeat the smoke test. Restore the prior Git commit if source code was also
+activated.
+
+The server cannot currently authenticate directly to GitHub. Transfer an
+incremental Git bundle over SSH and fast-forward the checked-out branch; never
+replace tracked files manually.
