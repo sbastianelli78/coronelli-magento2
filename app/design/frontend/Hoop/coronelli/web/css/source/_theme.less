@@ -1,5 +1,6 @@
 // @import '_variables.less';
-@main_pink: #e09fab;
+@main_pink: #F5E5C0;
+@price_gold: #ebc367;
 @main_brown: #542d00;
 @light_grey: #f4f4f4;
 @dark_grey: #696969;
@@ -124,7 +125,7 @@ button,
 .product-list-item .product-info .price-box .price,
 .product-view .product-info-main .price-box .price-wrapper .price,
 .quick-view-content .product-info-main .product-info-stock-sku .stock span {
-  color: @main_pink !important;
+  color: @price_gold !important;
 }
 
 .product-item .product-info .price-box .old-price .price,
@@ -410,21 +411,21 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/spalmabili.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/spalmabili.jpg');
         position: absolute;
         top: -50px;
         left: 16%;
         max-width: 150px;
       }
       .subchildmenu .level1:nth-child(2) > a:before {
-        content: url('../images/vegan.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/vegan.jpg');
         position: absolute;
         top: -50px;
         left: 16%;
         max-width: 150px;
       }
       .subchildmenu .level1:last-child > a:before {
-        content: url('../images/frutta.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/frutta.jpg');
         position: absolute;
         top: -50px;
         left: 15%;
@@ -451,7 +452,7 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/paste-puro-bio.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/paste-puro-bio.jpg');
         position: absolute;
         top: -20px;
         left: 16%;
@@ -477,7 +478,7 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/topping.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/finepasto.jpg');
         position: absolute;
         top: -50px;
         left: 8%;
@@ -499,7 +500,7 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/miele.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/finepasto.jpg');
         position: absolute;
         top: -15px;
         left: 15%;
@@ -521,14 +522,14 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/cioccolato-bio.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/cioccolato-bio.jpg');
         position: absolute;
         top: -50px;
         left: 23%;
         max-width: 150px;
       }
       .subchildmenu .level1:last-child > a:before {
-        content: url('../images/caffe.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/caffe.jpg');
         position: absolute;
         top: -50px;
         left: 24%;
@@ -550,7 +551,7 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/topping.jpg');
+        content: url('/media/catalog/product/t/o/topping_ciokkissimo.jpg');
         position: absolute;
         top: -20px;
         left: 16%;
@@ -568,21 +569,21 @@ nav.navigation {
         }
       }
       .subchildmenu .level1:first-child > a:before {
-        content: url('../images/liquori-creme-seta.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/liquori-creme-seta.jpg');
         position: absolute;
         top: -50px;
         left: 16%;
         max-width: 150px;
       }
       .subchildmenu .level1:nth-child(2) > a:before {
-        content: url('../images/liquori-spirito-libero.jpg') !important;
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/liquori-spirito-libero.jpg') !important;
         position: absolute;
         top: -50px;
         left: 17%;
         max-width: 150px;
       }
       .subchildmenu .level1:last-child > a:before {
-        content: url('../images/aceto.jpg');
+        content: url('/static/frontend/Hoop/coronelli/it_IT/images/liquori.jpg');
         position: absolute;
         top: -50px;
         left: 15%;
@@ -1018,7 +1019,7 @@ body.account .sidebar nav.account-nav ul.items li:nth-child(4) {
 }
 
 .pl-iva-inclusa {
-  color: @main_pink;
+  color: @price_gold;
   padding-left: 10px;
 }
 
@@ -1432,5 +1433,35 @@ h5.pl-sku {
       padding-bottom: 0;
     }
 
+  }
+}
+
+// Desktop megamenu adjustments previously applied directly to compiled CSS.
+@media screen and (min-width: 768px) {
+  nav.navigation .level0.parent:first-child .submenu {
+    min-width: 550px;
+  }
+
+  nav.navigation .level0.parent:last-child .submenu {
+    display: block;
+    width: 180px !important;
+    float: right;
+    right: 0;
+    left: auto !important;
+  }
+
+  nav.navigation .level0.parent:last-child .submenu .ui-menu-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav.navigation .level0.parent:last-child .subchildmenu .level1:last-child > a:before {
+    left: 7px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  nav.navigation .level0.parent:first-child .submenu {
+    min-width: 625px;
   }
 }
