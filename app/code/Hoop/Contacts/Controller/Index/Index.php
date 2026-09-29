@@ -8,7 +8,6 @@ use Magento\Framework\Translate\Inline\StateInterface;
 use \Psr\Log\LoggerInterface;
 use Hoop\Contacts\Helper\Data;
 use Hoop\Contacts\Helper\MailChimp;
-use Magento\Framework\App\ResponseInterface;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
@@ -30,8 +29,7 @@ class Index extends \Magento\Framework\App\Action\Action
         LoggerInterface $logger,
         \Magento\Newsletter\Model\SubscriberFactory $subscriberFactory,
         Data $helper,
-        MailChimp $mailchimp,
-        ResponseInterface $response
+        MailChimp $mailchimp
     )
     {
         $this->resultPageFactory = $resultPageFactory;
@@ -41,7 +39,7 @@ class Index extends \Magento\Framework\App\Action\Action
         $this->subscriberFactory = $subscriberFactory;
         $this->helper = $helper;
         $this->mailchimp = $mailchimp;
-        $this->_response = $response;
+        $this->_response = $context->getResponse();
 
         parent::__construct($context);
     }
