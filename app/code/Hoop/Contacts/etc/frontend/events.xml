@@ -3,6 +3,6 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="controller_action_predispatch_hoop_contacts_index_index">
         <observer name="hoop_contacts_check_contact_captcha"
-                  instance="Hoop\Contacts\Observer\CheckContactCaptcha"/>
+                  instance="Hoop\Contacts\Observer\ValidateContactCaptcha"/>
     </event>
 </config>
