@@ -1,3 +1,32 @@
 <?xml version="1.0"?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-<referenceBlock name="content"><block template="content.phtml" class="Hoop\Contacts\Block\Main" name="hoop_contacts_block_main"/></referenceBlock></page>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="content">
+            <block template="content.phtml"
+                   class="Hoop\Contacts\Block\Main"
+                   name="hoop_contacts_block_main">
+                <block class="Magento\Captcha\Block\Captcha"
+                       name="hoop.contacts.captcha"
+                       as="form.additional.info"
+                       cacheable="false">
+                    <action method="setFormId">
+                        <argument name="formId" xsi:type="string">contact_us</argument>
+                    </action>
+                    <action method="setImgWidth">
+                        <argument name="width" xsi:type="string">230</argument>
+                    </action>
+                    <action method="setImgHeight">
+                        <argument name="height" xsi:type="string">50</argument>
+                    </action>
+                </block>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components"
+                   name="hoop.contacts.captcha.components"
+                   template="Magento_Captcha::js/components.phtml"/>
+        </referenceBlock>
+    </body>
+</page>

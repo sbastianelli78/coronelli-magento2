@@ -8,6 +8,8 @@ use Magento\Framework\Translate\Inline\StateInterface;
 use \Psr\Log\LoggerInterface;
 use Hoop\Contacts\Helper\Data;
 use Hoop\Contacts\Helper\MailChimp;
+use Magento\Captcha\Helper\Data as CaptchaHelper;
+use Magento\Captcha\Observer\CaptchaStringResolver;
 use Magento\Framework\App\ResponseInterface;
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -20,6 +22,8 @@ class Index extends \Magento\Framework\App\Action\Action
     protected $subscriberFactory;
     protected $helper;
     protected $mailchimp;
+    protected $captchaHelper;
+    protected $captchaStringResolver;
     protected $_response;
 
     public function __construct(
@@ -31,6 +35,8 @@ class Index extends \Magento\Framework\App\Action\Action
         \Magento\Newsletter\Model\SubscriberFactory $subscriberFactory,
         Data $helper,
         MailChimp $mailchimp,
+        CaptchaHelper $captchaHelper,
+        CaptchaStringResolver $captchaStringResolver,
         ResponseInterface $response
     )
     {
@@ -41,6 +47,8 @@ class Index extends \Magento\Framework\App\Action\Action
         $this->subscriberFactory = $subscriberFactory;
         $this->helper = $helper;
         $this->mailchimp = $mailchimp;
+        $this->captchaHelper = $captchaHelper;
+        $this->captchaStringResolver = $captchaStringResolver;
         $this->_response = $response;
 
         parent::__construct($context);
@@ -51,8 +59,22 @@ class Index extends \Magento\Framework\App\Action\Action
         $post = $this->getRequest()->getPostValue();
 
         if (!empty($post)) {
+            $isMailchimpForm = isset($post['from']) && $post['from'] === 'mailchimpform';
 
-            if ($post['from'] == 'mailchimpform') {
+            if (!$isMailchimpForm) {
+                $formId = 'contact_us';
+                $captcha = $this->captchaHelper->getCaptcha($formId);
+                if ($captcha->isRequired()
+                    && !$captcha->isCorrect(
+                        $this->captchaStringResolver->resolve($this->getRequest(), $formId)
+                    )
+                ) {
+                    $this->messageManager->addError(__('Incorrect CAPTCHA.'));
+                    return $this->resultRedirectFactory->create()->setPath('hoop_contacts/index/index');
+                }
+            }
+
+            if ($isMailchimpForm) {
 
                 if (!filter_var($this->getRequest()->getPost('email'), FILTER_VALIDATE_EMAIL)) {
                     $this->messageManager->addError('E-mail non valida.');
